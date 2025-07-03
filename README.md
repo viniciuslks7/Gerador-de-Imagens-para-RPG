@@ -10,9 +10,6 @@ Este projeto é um gerador de imagens temático de RPG/Fantasia, utilizando a AP
 - Prompt enriquecido automaticamente para melhores resultados
 - Ornamentos de dragão, runas e detalhes mágicos
 
-## Demonstração
-![Demonstração do app](screenshot.png)
-
 ## Como rodar localmente
 
 ### 1. Clone o repositório
