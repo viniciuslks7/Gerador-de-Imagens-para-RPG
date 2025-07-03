@@ -1,36 +1,64 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Gerador de Imagens RPG com IA
 
-## Getting Started
+Este projeto é um gerador de imagens temático de RPG/Fantasia, utilizando a API da Stability.ai (Stable Diffusion) para criar artes incríveis a partir de descrições textuais. O app possui interface moderna, galeria, prompts enriquecidos automaticamente e visual totalmente customizado para o universo de fantasia medieval.
 
-First, run the development server:
+## Funcionalidades
+- Geração de imagens de personagens, monstros, cenários e itens de RPG via IA
+- Interface temática, responsiva e imersiva
+- Galeria de imagens geradas na sessão, com download
+- Visualização ampliada da imagem gerada
+- Prompt enriquecido automaticamente para melhores resultados
+- Ornamentos de dragão, runas e detalhes mágicos
 
+## Demonstração
+![Demonstração do app](screenshot.png)
+
+## Como rodar localmente
+
+### 1. Clone o repositório
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/seu-usuario/seu-repo.git
+cd seu-repo
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Instale as dependências
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 3. Configure a variável de ambiente
+Crie um arquivo `.env.local` na raiz do projeto com o seguinte conteúdo:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+STABILITY_API_KEY=sua_chave_aqui
+```
 
-## Learn More
+- Você pode obter uma chave gratuita em https://platform.stability.ai/
+- Nunca compartilhe sua chave pública!
+- **Dica:** Um arquivo `.env.example` está disponível para facilitar. Basta copiá-lo para `.env.local` e preencher com sua chave.
 
-To learn more about Next.js, take a look at the following resources:
+### 4. Rode o projeto localmente
+```bash
+npm run dev
+```
+Acesse [http://localhost:3000](http://localhost:3000) no navegador.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Como funciona
+- O usuário descreve o que deseja gerar (ex: "guerreiro anão com machado mágico").
+- O backend enriquece o prompt automaticamente com termos de arte digital, iluminação, artistas famosos, etc.
+- A imagem é gerada pela API da Stability.ai e exibida em destaque.
+- Todas as imagens ficam salvas na galeria da sessão, com opção de download.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Customização
+- Para mudar o modelo ou adicionar outras IAs, edite o arquivo `app/api/gerar-imagem/route.ts`.
+- Para alterar o visual, edite os arquivos em `app/page.module.css`.
 
-## Deploy on Vercel
+## Deploy
+Você pode publicar facilmente no Vercel, Netlify ou qualquer serviço que suporte Next.js.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Licença
+MIT
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+**Dúvidas ou sugestões?** Abra uma issue ou envie um pull request!
